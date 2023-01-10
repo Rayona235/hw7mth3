@@ -31,7 +31,6 @@ class NoteFragment : Fragment(),IItemClick {
 
         }
     }
-
     private fun setAddListener() {
         binding.addNote.setOnClickListener{
             if (binding.editNote.text.isBlank()){
@@ -47,7 +46,6 @@ class NoteFragment : Fragment(),IItemClick {
 
         }
     }
-
     override fun delete(pos: Int) {
         val alert = AlertDialog.Builder(requireContext())
         alert.setTitle(getString(R.string.warning))
@@ -73,7 +71,6 @@ class NoteFragment : Fragment(),IItemClick {
                 val newNote = NoteModel(binding.editNote.text.toString(),binding.editNote2.text.toString())
                 adapter.edit(pos,newNote)
             }
-
         }
     }
 }
